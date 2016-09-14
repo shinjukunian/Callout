@@ -19,17 +19,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="Xae-lf-urc"/>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9Mj-LN-Inb">
                                 <subviews>
-                                    <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Enter Text" translatesAutoresizingMaskIntoConstraints="NO" id="Xc5-GO-MkN">
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardAppearance="alert" returnKeyType="go"/>
+                                    <searchBar contentMode="redraw" barStyle="black" searchBarStyle="minimal" placeholder="Enter Text" translatesAutoresizingMaskIntoConstraints="NO" id="Ygq-Z5-dGG">
+                                        <textInputTraits key="textInputTraits" keyboardAppearance="light"/>
                                         <connections>
-                                            <outlet property="delegate" destination="ObA-dk-sSI" id="RBy-oN-j1p"/>
+                                            <outlet property="delegate" destination="ObA-dk-sSI" id="g7f-uZ-foo"/>
                                         </connections>
                                     </searchBar>
                                 </subviews>
                             </stackView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PsZ-7R-cEv">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="tAT-Md-g3N" kind="embed" id="hQG-Qq-EuY"/>
                                 </connections>
@@ -37,11 +39,15 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Xae-lf-urc" firstAttribute="centerY" secondItem="zMn-AG-sqS" secondAttribute="centerY" id="0tl-NJ-hTy"/>
                             <constraint firstItem="9Mj-LN-Inb" firstAttribute="top" secondItem="qkL-Od-lgU" secondAttribute="bottom" id="D0U-VY-wo6"/>
+                            <constraint firstItem="Xae-lf-urc" firstAttribute="centerX" secondItem="zMn-AG-sqS" secondAttribute="centerX" id="EqA-Hu-NIM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="PsZ-7R-cEv" secondAttribute="trailing" id="Qoi-rQ-7lq"/>
+                            <constraint firstItem="Xae-lf-urc" firstAttribute="width" secondItem="zMn-AG-sqS" secondAttribute="width" id="RAT-Xm-mtQ"/>
                             <constraint firstItem="PsZ-7R-cEv" firstAttribute="top" secondItem="9Mj-LN-Inb" secondAttribute="bottom" id="V5D-fI-gkc"/>
                             <constraint firstAttribute="leadingMargin" secondItem="9Mj-LN-Inb" secondAttribute="leading" id="Vkq-Xr-TPB"/>
                             <constraint firstItem="PsZ-7R-cEv" firstAttribute="leading" secondItem="zMn-AG-sqS" secondAttribute="leadingMargin" id="WQ6-mR-pQA"/>
+                            <constraint firstItem="Xae-lf-urc" firstAttribute="height" secondItem="zMn-AG-sqS" secondAttribute="height" id="bjd-he-fvH"/>
                             <constraint firstItem="n38-gi-rB5" firstAttribute="top" secondItem="PsZ-7R-cEv" secondAttribute="bottom" id="lPe-YR-uOp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9Mj-LN-Inb" secondAttribute="trailing" id="mtf-lU-LfK"/>
                         </constraints>
@@ -49,7 +55,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="528"/>
                     <connections>
-                        <outlet property="searchBar" destination="Xc5-GO-MkN" id="332-AJ-fpO"/>
+                        <outlet property="searchBar" destination="Ygq-Z5-dGG" id="W8K-7O-tOV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X47-rx-isc" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -67,7 +73,7 @@
                     <view key="view" contentMode="scaleToFill" id="vqh-n0-1YU">
                         <rect key="frame" x="0.0" y="0.0" width="288" height="464"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4zO-fq-I8t" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -75,4 +81,7 @@
             <point key="canvasLocation" x="840" y="166"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Image" width="16" height="16"/>
+    </resources>
 </document>

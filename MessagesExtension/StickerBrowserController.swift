@@ -17,7 +17,7 @@ class StickerBrowserController: MSStickerBrowserViewController {
     }
     
     override func viewDidLoad() {
-        
+        self.stickerBrowserView.backgroundColor=nil
         
     }
     

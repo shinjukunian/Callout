@@ -16,7 +16,7 @@ class MessagesViewController: MSMessagesAppViewController,UISearchBarDelegate {
     
     var shouldActivateSearchbar:Bool = false
     var shouldBecomeFirstResponer:Bool = true
-    
+    let maxCallouts=10
     
     lazy var queue: OperationQueue = {
         let q=OperationQueue()
@@ -64,6 +64,9 @@ class MessagesViewController: MSMessagesAppViewController,UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.searchBar.tintColor=UIColor.white
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).textColor=UIColor.white
+        
     }
     
     
@@ -88,13 +91,23 @@ class MessagesViewController: MSMessagesAppViewController,UISearchBarDelegate {
             })
             self.queue.addOperation(renderOP)
         }
-        else if self.imageURLS.count>10{
-            self.urls=Array(self.imageURLS[0..<10])
+        else if self.imageURLS.count>maxCallouts{
+            self.urls=Array(self.imageURLS[0..<maxCallouts])
+            let URLSToDelete=self.imageURLS[maxCallouts..<self.imageURLS.indices.last!]
+            
+            DispatchQueue.global(qos: .background).async {
+                do{
+                    try URLSToDelete.forEach{try FileManager.default.removeItem(at: $0)}
+                }catch let error{
+                    print(error)
+                }
+            }
+            
         }
         else{
             self.urls=self.imageURLS
         }
-        
+        self.searchBar.returnKeyType = .done
 
     }
     
@@ -142,14 +155,14 @@ class MessagesViewController: MSMessagesAppViewController,UISearchBarDelegate {
     }
     
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
-        self.requestPresentationStyle(.expanded)
-        self.shouldActivateSearchbar=true
-        if self.shouldBecomeFirstResponer == false {
-            self.shouldBecomeFirstResponer=true
+        if self.presentationStyle != .expanded{
+             self.requestPresentationStyle(.expanded)
             return false
+            
         }
-        return true
-        
+        else{
+            return true
+        }        
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {

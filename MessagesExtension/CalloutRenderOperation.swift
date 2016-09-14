@@ -92,15 +92,23 @@ class CalloutRenderOperation: Operation {
             return
         }
         
+        var blankAttributes=self.attributes
+        blankAttributes[NSForegroundColorAttributeName]=UIColor.clear
+        blankAttributes[NSStrokeColorAttributeName]=UIColor.clear
+        blankAttributes[NSStrokeWidthAttributeName]=nil
+        
         let rect = stringSize.height > self.size.height ? CGRect(x: 0.0, y: 0.0, width: stringSize.width, height: self.size.height) : CGRect(x: 0, y: 0, width: stringSize.width, height: stringSize.height).integral
         for item in ranges{
-            let substtring=self.text.substring(to: item.0.upperBound)
-            let att=NSAttributedString(string: substtring, attributes: self.attributes)
-            let bounding=att.boundingRect(with: rect.size, options:options , context: nil)
             
+            let substring=self.text.substring(to: item.0.upperBound)
+            let att1=NSAttributedString(string: substring, attributes: self.attributes)
+            let remainder=self.text.substring(from: item.0.upperBound)
+            let att2=NSAttributedString(string: remainder, attributes: blankAttributes)
+            let drawString=NSMutableAttributedString(attributedString: att1)
+            drawString.append(att2)
             let renderer=UIGraphicsImageRenderer.init(bounds: rect)
             if let image=renderer.image(actions: {c in
-                att.draw(with: rect, options: options, context: nil)
+                drawString.draw(with: rect, options: options, context: nil)
             }).cgImage
                 
             {
