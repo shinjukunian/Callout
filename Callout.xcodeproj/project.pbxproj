@@ -11,8 +11,12 @@
 		B7151D6E1D892B600008B5AC /* MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B7151D6D1D892B600008B5AC /* MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B7151D731D892B600008B5AC /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7151D721D892B600008B5AC /* Messages.framework */; };
 		B7151D761D892B600008B5AC /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7151D751D892B600008B5AC /* MessagesViewController.swift */; };
-		B7151D791D892B600008B5AC /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7151D771D892B600008B5AC /* MainInterface.storyboard */; };
 		B7151D7B1D892B600008B5AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7151D7A1D892B600008B5AC /* Assets.xcassets */; };
+		B7151D8F1D892BA90008B5AC /* APNG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7151D8E1D892B9C0008B5AC /* APNG.framework */; };
+		B7151D941D892C170008B5AC /* CalloutRenderOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7151D931D892C170008B5AC /* CalloutRenderOperation.swift */; };
+		B7151D991D8935210008B5AC /* StickerBrowserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7151D981D8935210008B5AC /* StickerBrowserController.swift */; };
+		B7151D9A1D8940560008B5AC /* APNG.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B7151D8E1D892B9C0008B5AC /* APNG.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B7151D9D1D894B9E0008B5AC /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7151D9B1D894B9E0008B5AC /* MainInterface.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -22,6 +26,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = B7151D6C1D892B600008B5AC;
 			remoteInfo = MessagesExtension;
+		};
+		B7151D8B1D892B9C0008B5AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7151D861D892B9B0008B5AC /* APNG.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B7EA682F1D7681D60041CB2D;
+			remoteInfo = APNG;
+		};
+		B7151D8D1D892B9C0008B5AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7151D861D892B9B0008B5AC /* APNG.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B7F8FB491D768534008D6106;
+			remoteInfo = "APNG(iOS)";
+		};
+		B7151D901D892BBB0008B5AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7151D861D892B9B0008B5AC /* APNG.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = B7F8FB171D768534008D6106;
+			remoteInfo = "APNG(iOS)";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -37,6 +62,16 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B7151D921D892BC50008B5AC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B7151D9A1D8940560008B5AC /* APNG.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -46,9 +81,12 @@
 		B7151D6D1D892B600008B5AC /* MessagesExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MessagesExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7151D721D892B600008B5AC /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
 		B7151D751D892B600008B5AC /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
-		B7151D781D892B600008B5AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		B7151D7A1D892B600008B5AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7151D7C1D892B600008B5AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7151D861D892B9B0008B5AC /* APNG.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = APNG.xcodeproj; path = APNG/APNG.xcodeproj; sourceTree = SOURCE_ROOT; };
+		B7151D931D892C170008B5AC /* CalloutRenderOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalloutRenderOperation.swift; sourceTree = "<group>"; };
+		B7151D981D8935210008B5AC /* StickerBrowserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerBrowserController.swift; sourceTree = "<group>"; };
+		B7151D9C1D894B9E0008B5AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7151D8F1D892BA90008B5AC /* APNG.framework in Frameworks */,
 				B7151D731D892B600008B5AC /* Messages.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -102,12 +141,24 @@
 		B7151D741D892B600008B5AC /* MessagesExtension */ = {
 			isa = PBXGroup;
 			children = (
+				B7151D861D892B9B0008B5AC /* APNG.xcodeproj */,
 				B7151D751D892B600008B5AC /* MessagesViewController.swift */,
-				B7151D771D892B600008B5AC /* MainInterface.storyboard */,
+				B7151D931D892C170008B5AC /* CalloutRenderOperation.swift */,
+				B7151D981D8935210008B5AC /* StickerBrowserController.swift */,
+				B7151D9B1D894B9E0008B5AC /* MainInterface.storyboard */,
 				B7151D7A1D892B600008B5AC /* Assets.xcassets */,
 				B7151D7C1D892B600008B5AC /* Info.plist */,
 			);
 			path = MessagesExtension;
+			sourceTree = "<group>";
+		};
+		B7151D871D892B9B0008B5AC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B7151D8C1D892B9C0008B5AC /* APNG.framework */,
+				B7151D8E1D892B9C0008B5AC /* APNG.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,10 +188,12 @@
 				B7151D691D892B600008B5AC /* Sources */,
 				B7151D6A1D892B600008B5AC /* Frameworks */,
 				B7151D6B1D892B600008B5AC /* Resources */,
+				B7151D921D892BC50008B5AC /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				B7151D911D892BBB0008B5AC /* PBXTargetDependency */,
 			);
 			name = MessagesExtension;
 			productName = MessagesExtension;
@@ -180,6 +233,12 @@
 			mainGroup = B7151D5C1D892B600008B5AC;
 			productRefGroup = B7151D641D892B600008B5AC /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B7151D871D892B9B0008B5AC /* Products */;
+					ProjectRef = B7151D861D892B9B0008B5AC /* APNG.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				B7151D621D892B600008B5AC /* Callout */,
@@ -187,6 +246,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B7151D8C1D892B9C0008B5AC /* APNG.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = APNG.framework;
+			remoteRef = B7151D8B1D892B9C0008B5AC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B7151D8E1D892B9C0008B5AC /* APNG.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = APNG.framework;
+			remoteRef = B7151D8D1D892B9C0008B5AC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B7151D611D892B600008B5AC /* Resources */ = {
@@ -202,7 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7151D7B1D892B600008B5AC /* Assets.xcassets in Resources */,
-				B7151D791D892B600008B5AC /* MainInterface.storyboard in Resources */,
+				B7151D9D1D894B9E0008B5AC /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +289,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7151D991D8935210008B5AC /* StickerBrowserController.swift in Sources */,
+				B7151D941D892C170008B5AC /* CalloutRenderOperation.swift in Sources */,
 				B7151D761D892B600008B5AC /* MessagesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -225,13 +303,18 @@
 			target = B7151D6C1D892B600008B5AC /* MessagesExtension */;
 			targetProxy = B7151D6F1D892B600008B5AC /* PBXContainerItemProxy */;
 		};
+		B7151D911D892BBB0008B5AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "APNG(iOS)";
+			targetProxy = B7151D901D892BBB0008B5AC /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		B7151D771D892B600008B5AC /* MainInterface.storyboard */ = {
+		B7151D9B1D894B9E0008B5AC /* MainInterface.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B7151D781D892B600008B5AC /* Base */,
+				B7151D9C1D894B9E0008B5AC /* Base */,
 			);
 			name = MainInterface.storyboard;
 			sourceTree = "<group>";
