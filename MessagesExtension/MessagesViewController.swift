@@ -32,7 +32,7 @@ class MessagesViewController: MSMessagesAppViewController,UISearchBarDelegate {
     }
     lazy var imageURLS: [URL] = {
         let temp=URL(fileURLWithPath: NSTemporaryDirectory())
-        if let urls=try? FileManager.default.contentsOfDirectory(at: temp, includingPropertiesForKeys: [.addedToDirectoryDateKey], options: []){
+        if let urls=try? FileManager.default.contentsOfDirectory(at: temp, includingPropertiesForKeys: [.addedToDirectoryDateKey,.isDirectoryKey], options: [.skipsHiddenFiles]){
             let sorted=urls.sorted(by: {url1, url2 in
                 if  let values1 = try? url1.resourceValues(forKeys: Set([.addedToDirectoryDateKey])),
                     let values2 = try? url2.resourceValues(forKeys: Set([.addedToDirectoryDateKey])),
@@ -45,7 +45,15 @@ class MessagesViewController: MSMessagesAppViewController,UISearchBarDelegate {
                 
                 return true
             })
-             return sorted
+            let filtered=sorted.filter({url in
+                if  let value = try? url.resourceValues(forKeys: Set([.isDirectoryKey])),
+                    let isDirectory=value.isDirectory{
+                    
+                    return !isDirectory
+                }
+                return false
+            })
+             return filtered
         }
        return [URL]()
     }()
@@ -123,12 +131,14 @@ class MessagesViewController: MSMessagesAppViewController,UISearchBarDelegate {
             _=self.searchBar!.resignFirstResponder()
             
         case .expanded:
-            DispatchQueue.main.async {
-            _=self.searchBar?.becomeFirstResponder()
-            
-            }
-            
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+DispatchTimeInterval.milliseconds(50), execute:{
+                _=self.searchBar?.becomeFirstResponder()
+            })
+           
+        
         }
+    
+        
     }
     
     func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
@@ -152,7 +162,7 @@ class MessagesViewController: MSMessagesAppViewController,UISearchBarDelegate {
             let renderOP=CalloutRenderOperation(text: text, completion: {outURL in
                 if let url=outURL{
                     DispatchQueue.main.async {
-                        self.urls.append(url)
+                        self.urls.insert(url, at: self.urls.indices.first!)
                     }
                 }
             })

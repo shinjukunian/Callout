@@ -22,7 +22,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9Mj-LN-Inb">
                                 <subviews>
                                     <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Enter Text" translatesAutoresizingMaskIntoConstraints="NO" id="Xc5-GO-MkN">
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardAppearance="alert" returnKeyType="go"/>
                                         <connections>
                                             <outlet property="delegate" destination="ObA-dk-sSI" id="RBy-oN-j1p"/>
                                         </connections>
