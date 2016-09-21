@@ -9,6 +9,7 @@
 import UIKit
 import Messages
 
+//project setup according to https://developer.apple.com/library/content/qa/qa1936/_index.html
 
 
 class MessagesViewController: MSMessagesAppViewController,UISearchBarDelegate {

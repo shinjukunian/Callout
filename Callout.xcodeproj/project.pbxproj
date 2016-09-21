@@ -6,6 +6,21 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		B7151DA91D899C1E0008B5AC /* EmbedFramework */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B7151DAA1D899C1E0008B5AC /* Build configuration list for PBXAggregateTarget "EmbedFramework" */;
+			buildPhases = (
+				B7151DB11D899C310008B5AC /* ShellScript */,
+			);
+			dependencies = (
+				B7151DAE1D899C250008B5AC /* PBXTargetDependency */,
+			);
+			name = EmbedFramework;
+			productName = EmbedFramework;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		B7151D671D892B600008B5AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7151D661D892B600008B5AC /* Assets.xcassets */; };
 		B7151D6E1D892B600008B5AC /* MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B7151D6D1D892B600008B5AC /* MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -15,7 +30,6 @@
 		B7151D8F1D892BA90008B5AC /* APNG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7151D8E1D892B9C0008B5AC /* APNG.framework */; };
 		B7151D941D892C170008B5AC /* CalloutRenderOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7151D931D892C170008B5AC /* CalloutRenderOperation.swift */; };
 		B7151D991D8935210008B5AC /* StickerBrowserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7151D981D8935210008B5AC /* StickerBrowserController.swift */; };
-		B7151D9A1D8940560008B5AC /* APNG.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = B7151D8E1D892B9C0008B5AC /* APNG.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B7151D9D1D894B9E0008B5AC /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7151D9B1D894B9E0008B5AC /* MainInterface.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -41,12 +55,19 @@
 			remoteGlobalIDString = B7F8FB491D768534008D6106;
 			remoteInfo = "APNG(iOS)";
 		};
-		B7151D901D892BBB0008B5AC /* PBXContainerItemProxy */ = {
+		B7151DAD1D899C250008B5AC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B7151D861D892B9B0008B5AC /* APNG.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = B7F8FB171D768534008D6106;
 			remoteInfo = "APNG(iOS)";
+		};
+		B7151DAF1D899C290008B5AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7151D5D1D892B600008B5AC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7151DA91D899C1E0008B5AC;
+			remoteInfo = EmbedFramework;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -60,16 +81,6 @@
 				B7151D6E1D892B600008B5AC /* MessagesExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B7151D921D892BC50008B5AC /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				B7151D9A1D8940560008B5AC /* APNG.framework in CopyFiles */,
-			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -188,12 +199,11 @@
 				B7151D691D892B600008B5AC /* Sources */,
 				B7151D6A1D892B600008B5AC /* Frameworks */,
 				B7151D6B1D892B600008B5AC /* Resources */,
-				B7151D921D892BC50008B5AC /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B7151D911D892BBB0008B5AC /* PBXTargetDependency */,
+				B7151DB01D899C290008B5AC /* PBXTargetDependency */,
 			);
 			name = MessagesExtension;
 			productName = MessagesExtension;
@@ -216,6 +226,11 @@
 						ProvisioningStyle = Automatic;
 					};
 					B7151D6C1D892B600008B5AC = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = DVQ96RL2KL;
+						ProvisioningStyle = Automatic;
+					};
+					B7151DA91D899C1E0008B5AC = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = DVQ96RL2KL;
 						ProvisioningStyle = Automatic;
@@ -243,6 +258,7 @@
 			targets = (
 				B7151D621D892B600008B5AC /* Callout */,
 				B7151D6C1D892B600008B5AC /* MessagesExtension */,
+				B7151DA91D899C1E0008B5AC /* EmbedFramework */,
 			);
 		};
 /* End PBXProject section */
@@ -284,6 +300,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B7151DB11D899C310008B5AC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${DEPLOYMENT_LOCATION}\" = \"YES\" ] ; then\nFRAMEWORKS_DIR=\"${DSTROOT}/Applications/Callout.app/Frameworks\"\nelse\nFRAMEWORKS_DIR=\"${BUILT_PRODUCTS_DIR}/Callout.app/Frameworks\"\nfi\n\nrm -rf \"${FRAMEWORKS_DIR}/APNG.framework\"\nmkdir -p \"${FRAMEWORKS_DIR}\"\ncp -r \"${BUILT_PRODUCTS_DIR}/APNG.framework\" \"${FRAMEWORKS_DIR}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B7151D691D892B600008B5AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -303,10 +335,15 @@
 			target = B7151D6C1D892B600008B5AC /* MessagesExtension */;
 			targetProxy = B7151D6F1D892B600008B5AC /* PBXContainerItemProxy */;
 		};
-		B7151D911D892BBB0008B5AC /* PBXTargetDependency */ = {
+		B7151DAE1D899C250008B5AC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "APNG(iOS)";
-			targetProxy = B7151D901D892BBB0008B5AC /* PBXContainerItemProxy */;
+			targetProxy = B7151DAD1D899C250008B5AC /* PBXContainerItemProxy */;
+		};
+		B7151DB01D899C290008B5AC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7151DA91D899C1E0008B5AC /* EmbedFramework */;
+			targetProxy = B7151DAF1D899C290008B5AC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -471,6 +508,22 @@
 			};
 			name = Release;
 		};
+		B7151DAB1D899C1E0008B5AC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = DVQ96RL2KL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B7151DAC1D899C1E0008B5AC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEVELOPMENT_TEAM = DVQ96RL2KL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -490,6 +543,7 @@
 				B7151D811D892B600008B5AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B7151D831D892B600008B5AC /* Build configuration list for PBXNativeTarget "Callout" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +552,16 @@
 				B7151D851D892B600008B5AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7151DAA1D899C1E0008B5AC /* Build configuration list for PBXAggregateTarget "EmbedFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7151DAB1D899C1E0008B5AC /* Debug */,
+				B7151DAC1D899C1E0008B5AC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
