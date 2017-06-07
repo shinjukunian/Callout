@@ -148,6 +148,8 @@ class MessagesViewController: MSMessagesAppViewController,UISearchBarDelegate {
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+DispatchTimeInterval.milliseconds(50), execute:{
                 _=self.searchBar?.becomeFirstResponder()
             })
+        default:
+            break
            
         
         }

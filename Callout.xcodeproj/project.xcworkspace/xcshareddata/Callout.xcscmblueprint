@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "A37732066DBA1CAD1920E6A4F5F3B253638628BA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "2A6A4EE16833CD0513A0A6F6A331D686FC824FE1" : 9223372036854775807,
+    "A37732066DBA1CAD1920E6A4F5F3B253638628BA" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "F1DEF933-A71B-4F1D-A354-D5928A09D142",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "2A6A4EE16833CD0513A0A6F6A331D686FC824FE1" : "Callout\/APNG\/",
+    "A37732066DBA1CAD1920E6A4F5F3B253638628BA" : "Callout\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Callout",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Callout.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/shinjukunian\/APNGasmCocoa.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2A6A4EE16833CD0513A0A6F6A331D686FC824FE1"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/shinjukunian\/Callout.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A37732066DBA1CAD1920E6A4F5F3B253638628BA"
+    }
+  ]
+}

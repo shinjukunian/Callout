@@ -20,16 +20,16 @@ class CalloutRenderOperation: Operation {
     }()
     let size=CGSize(width: 206, height: 206)
     var fontSize:CGFloat=40
-    fileprivate lazy var attributes:[String:AnyObject] = {
+    fileprivate lazy var attributes:[NSAttributedStringKey:AnyObject] = {
         let font=UIFont.init(name: "AmericanTypewriter-Bold", size: self.fontSize)
         let style=NSMutableParagraphStyle()
         style.alignment=NSTextAlignment.center
         style.lineBreakMode=NSLineBreakMode.byWordWrapping
-        let at:[String:AnyObject]=[NSFontAttributeName:font!,
-                NSForegroundColorAttributeName:#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1),
-                NSStrokeColorAttributeName:#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1),
-                NSStrokeWidthAttributeName:-4.0 as AnyObject,
-                NSParagraphStyleAttributeName:style,
+        let at:[NSAttributedStringKey:AnyObject]=[NSAttributedStringKey.font:font!,
+                                                  NSAttributedStringKey.foregroundColor:#colorLiteral(red: 1, green: 1, blue: 1, alpha: 1),
+                                                  NSAttributedStringKey.strokeColor:#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1),
+                                                  NSAttributedStringKey.strokeWidth:-4.0 as AnyObject,
+                                                  NSAttributedStringKey.paragraphStyle:style,
                 ]
         return at
     }()
@@ -55,10 +55,10 @@ class CalloutRenderOperation: Operation {
         let ratio=stringSize.height/self.size.height
         if ratio>1{
             
-            let font=self.attributes[NSFontAttributeName] as! UIFont
+            let font=self.attributes[NSAttributedStringKey.font] as! UIFont
             let newFontSize=font.pointSize / (ratio<1/self.minimumScaleFactor ? ratio :1/self.minimumScaleFactor)
             let newFont=font.withSize(newFontSize)
-            self.attributes[NSFontAttributeName]=newFont
+            self.attributes[NSAttributedStringKey.font]=newFont
             stringSize=att.boundingRect(with: self.size, options: [.usesLineFragmentOrigin,.usesFontLeading], context: nil)
             
         }
@@ -93,9 +93,9 @@ class CalloutRenderOperation: Operation {
         }
         
         var blankAttributes=self.attributes
-        blankAttributes[NSForegroundColorAttributeName]=UIColor.clear
-        blankAttributes[NSStrokeColorAttributeName]=UIColor.clear
-        blankAttributes[NSStrokeWidthAttributeName]=nil
+        blankAttributes[NSAttributedStringKey.foregroundColor]=UIColor.clear
+        blankAttributes[NSAttributedStringKey.strokeColor]=UIColor.clear
+        blankAttributes[NSAttributedStringKey.strokeWidth]=nil
         
         let rect = stringSize.height > self.size.height ? CGRect(x: 0.0, y: 0.0, width: stringSize.width, height: self.size.height) : CGRect(x: 0, y: 0, width: stringSize.width, height: stringSize.height).integral
         for item in ranges{
