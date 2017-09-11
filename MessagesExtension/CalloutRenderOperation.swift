@@ -79,8 +79,8 @@ class CalloutRenderOperation: Operation {
         ranges.append((range,self.text))
         
         ranges=ranges.filter({item in
-            let substtring=self.text.substring(to: item.0.upperBound)
-            let att=NSAttributedString(string: substtring, attributes: self.attributes)
+            let substring=self.text.prefix(upTo: item.0.upperBound)
+            let att=NSAttributedString(string: String(substring), attributes: self.attributes)
             let bounding=att.boundingRect(with: stringSize.size, options:[.usesLineFragmentOrigin,.usesFontLeading] , context: nil)
             return bounding.height <= self.size.height
         })
@@ -100,10 +100,10 @@ class CalloutRenderOperation: Operation {
         let rect = stringSize.height > self.size.height ? CGRect(x: 0.0, y: 0.0, width: stringSize.width, height: self.size.height) : CGRect(x: 0, y: 0, width: stringSize.width, height: stringSize.height).integral
         for item in ranges{
             
-            let substring=self.text.substring(to: item.0.upperBound)
-            let att1=NSAttributedString(string: substring, attributes: self.attributes)
-            let remainder=self.text.substring(from: item.0.upperBound)
-            let att2=NSAttributedString(string: remainder, attributes: blankAttributes)
+            let substring=self.text.prefix(upTo: item.0.upperBound)
+            let att1=NSAttributedString(string: String(substring), attributes: self.attributes)
+            let remainder=self.text.suffix(from: item.0.upperBound)
+            let att2=NSAttributedString(string: String(remainder), attributes: blankAttributes)
             let drawString=NSMutableAttributedString(attributedString: att1)
             drawString.append(att2)
             let renderer=UIGraphicsImageRenderer.init(bounds: rect)
