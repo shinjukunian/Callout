@@ -41,6 +41,20 @@
 			remoteGlobalIDString = B7F8FB171D768534008D6106;
 			remoteInfo = "APNG(iOS)";
 		};
+		5A90B56B2018B985000BFBBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7151D861D892B9B0008B5AC /* APNG.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5A06FC5C1F6935FD00AB9851;
+			remoteInfo = "APNGTests-IOS";
+		};
+		5A90B56D2018B985000BFBBA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7151D861D892B9B0008B5AC /* APNG.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 5A31880C1F69467A004E3143;
+			remoteInfo = APNGTests;
+		};
 		B7151D6F1D892B600008B5AC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B7151D5D1D892B600008B5AC /* Project object */;
@@ -175,6 +189,8 @@
 			children = (
 				B7151D8C1D892B9C0008B5AC /* APNG.framework */,
 				B7151D8E1D892B9C0008B5AC /* APNG.framework */,
+				5A90B56C2018B985000BFBBA /* APNGTests-IOS.xctest */,
+				5A90B56E2018B985000BFBBA /* APNGTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -274,6 +290,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		5A90B56C2018B985000BFBBA /* APNGTests-IOS.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "APNGTests-IOS.xctest";
+			remoteRef = 5A90B56B2018B985000BFBBA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5A90B56E2018B985000BFBBA /* APNGTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = APNGTests.xctest;
+			remoteRef = 5A90B56D2018B985000BFBBA /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		B7151D8C1D892B9C0008B5AC /* APNG.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;

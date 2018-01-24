@@ -174,7 +174,7 @@ class MessagesViewController: MSMessagesAppViewController,UISearchBarDelegate {
 //            self.updateDisplay(kanji: characters)
 //        }
         self.shouldActivateSearchbar=false
-        if let text=searchBar.text, text.characters.count>0{
+        if let text=searchBar.text, text.count>0{
             let renderOP=CalloutRenderOperation(text: text, completion: {outURL in
                 if let url=outURL{
                     DispatchQueue.main.async {

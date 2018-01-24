@@ -65,11 +65,11 @@ class CalloutRenderOperation: Operation {
 
         
         var ranges=[(Range<String.Index>,String)]()
-        let range:Range<String.Index>=self.text.characters.startIndex..<self.text.characters.endIndex
+        let range:Range<String.Index>=self.text.startIndex..<self.text.endIndex
         self.text.enumerateSubstrings(in: range, options: [.byWords], {subString, range1, range2,_ in
             ranges.append((range2,subString!))
         })
-        if ranges.count == 1 || self.text.characters.count<10{
+        if ranges.count == 1 || self.text.count<10{
             ranges.removeAll()
             self.text.enumerateSubstrings(in: range, options: [.byComposedCharacterSequences], {subString, range1, range2,_ in
                 ranges.append((range2
