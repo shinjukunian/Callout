@@ -79,7 +79,7 @@ class MessagesViewController: MSMessagesAppViewController,UISearchBarDelegate {
     // MARK: - Conversation Handling
     
     override func willBecomeActive(with conversation: MSConversation) {
-        if let child=self.childViewControllers.first as? StickerBrowserController  {
+        if let child=self.children.first as? StickerBrowserController  {
             self.stickerBrowser=child
         }
         if self.imageURLS.count == 0{
