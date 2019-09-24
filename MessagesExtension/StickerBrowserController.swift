@@ -24,11 +24,12 @@ class StickerBrowserController: MSStickerBrowserViewController {
     override func numberOfStickers(in stickerBrowserView: MSStickerBrowserView) -> Int {
         return self.stickerPaths.count
     }
+    
     override func stickerBrowserView(_ stickerBrowserView: MSStickerBrowserView, stickerAt index: Int) -> MSSticker {
 
         let url=self.stickerPaths[index];
         let desc=url.deletingPathExtension().lastPathComponent
-        let sticker=try? MSSticker.init(contentsOfFileURL:url, localizedDescription: desc)
+        let sticker=try? MSSticker(contentsOfFileURL:url, localizedDescription: desc)
         return sticker!;
     }
     

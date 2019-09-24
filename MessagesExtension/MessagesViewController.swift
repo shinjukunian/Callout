@@ -41,11 +41,10 @@ class MessagesViewController: MSMessagesAppViewController,UISearchBarDelegate {
                     let date2=values2.addedToDirectoryDate
                 {
                    return date1>date2
-                    
                 }
-                
                 return true
             })
+            
             let filtered=sorted.filter({url in
                 if  let value = try? url.resourceValues(forKeys: Set([.isDirectoryKey])),
                     let isDirectory=value.isDirectory{

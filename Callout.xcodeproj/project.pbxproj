@@ -3,26 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		B7151DA91D899C1E0008B5AC /* EmbedFramework */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = B7151DAA1D899C1E0008B5AC /* Build configuration list for PBXAggregateTarget "EmbedFramework" */;
-			buildPhases = (
-				B7151DB11D899C310008B5AC /* ShellScript */,
-			);
-			dependencies = (
-				B7151DAE1D899C250008B5AC /* PBXTargetDependency */,
-			);
-			name = EmbedFramework;
-			productName = EmbedFramework;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
-		5A187A051F66CD41008BA6F6 /* APNG.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7151D8E1D892B9C0008B5AC /* APNG.framework */; };
+		5A43BC622321EE0200755174 /* ANPG in Frameworks */ = {isa = PBXBuildFile; productRef = 5A43BC612321EE0200755174 /* ANPG */; };
 		B7151D671D892B600008B5AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7151D661D892B600008B5AC /* Assets.xcassets */; };
 		B7151D6E1D892B600008B5AC /* MessagesExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B7151D6D1D892B600008B5AC /* MessagesExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B7151D731D892B600008B5AC /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7151D721D892B600008B5AC /* Messages.framework */; };
@@ -34,61 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5A187A061F66CD62008BA6F6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B7151D861D892B9B0008B5AC /* APNG.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = B7F8FB171D768534008D6106;
-			remoteInfo = "APNG(iOS)";
-		};
-		5A90B56B2018B985000BFBBA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B7151D861D892B9B0008B5AC /* APNG.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5A06FC5C1F6935FD00AB9851;
-			remoteInfo = "APNGTests-IOS";
-		};
-		5A90B56D2018B985000BFBBA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B7151D861D892B9B0008B5AC /* APNG.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5A31880C1F69467A004E3143;
-			remoteInfo = APNGTests;
-		};
 		B7151D6F1D892B600008B5AC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B7151D5D1D892B600008B5AC /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B7151D6C1D892B600008B5AC;
 			remoteInfo = MessagesExtension;
-		};
-		B7151D8B1D892B9C0008B5AC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B7151D861D892B9B0008B5AC /* APNG.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B7EA682F1D7681D60041CB2D;
-			remoteInfo = APNG;
-		};
-		B7151D8D1D892B9C0008B5AC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B7151D861D892B9B0008B5AC /* APNG.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B7F8FB491D768534008D6106;
-			remoteInfo = "APNG(iOS)";
-		};
-		B7151DAD1D899C250008B5AC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B7151D861D892B9B0008B5AC /* APNG.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = B7F8FB171D768534008D6106;
-			remoteInfo = "APNG(iOS)";
-		};
-		B7151DAF1D899C290008B5AC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B7151D5D1D892B600008B5AC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B7151DA91D899C1E0008B5AC;
-			remoteInfo = EmbedFramework;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -115,7 +51,6 @@
 		B7151D751D892B600008B5AC /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
 		B7151D7A1D892B600008B5AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7151D7C1D892B600008B5AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B7151D861D892B9B0008B5AC /* APNG.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = APNG.xcodeproj; path = APNG/APNG.xcodeproj; sourceTree = SOURCE_ROOT; };
 		B7151D931D892C170008B5AC /* CalloutRenderOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalloutRenderOperation.swift; sourceTree = "<group>"; };
 		B7151D981D8935210008B5AC /* StickerBrowserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StickerBrowserController.swift; sourceTree = "<group>"; };
 		B7151D9C1D894B9E0008B5AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
@@ -126,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A187A051F66CD41008BA6F6 /* APNG.framework in Frameworks */,
+				5A43BC622321EE0200755174 /* ANPG in Frameworks */,
 				B7151D731D892B600008B5AC /* Messages.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,7 +108,6 @@
 		B7151D741D892B600008B5AC /* MessagesExtension */ = {
 			isa = PBXGroup;
 			children = (
-				B7151D861D892B9B0008B5AC /* APNG.xcodeproj */,
 				B7151D751D892B600008B5AC /* MessagesViewController.swift */,
 				B7151D931D892C170008B5AC /* CalloutRenderOperation.swift */,
 				B7151D981D8935210008B5AC /* StickerBrowserController.swift */,
@@ -182,17 +116,6 @@
 				B7151D7C1D892B600008B5AC /* Info.plist */,
 			);
 			path = MessagesExtension;
-			sourceTree = "<group>";
-		};
-		B7151D871D892B9B0008B5AC /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B7151D8C1D892B9C0008B5AC /* APNG.framework */,
-				B7151D8E1D892B9C0008B5AC /* APNG.framework */,
-				5A90B56C2018B985000BFBBA /* APNGTests-IOS.xctest */,
-				5A90B56E2018B985000BFBBA /* APNGTests.xctest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -226,10 +149,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				5A187A071F66CD62008BA6F6 /* PBXTargetDependency */,
-				B7151DB01D899C290008B5AC /* PBXTargetDependency */,
 			);
 			name = MessagesExtension;
+			packageProductDependencies = (
+				5A43BC612321EE0200755174 /* ANPG */,
+			);
 			productName = MessagesExtension;
 			productReference = B7151D6D1D892B600008B5AC /* MessagesExtension.appex */;
 			productType = "com.apple.product-type.app-extension.messages";
@@ -241,7 +165,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "telethon k.k.";
 				TargetAttributes = {
 					B7151D621D892B600008B5AC = {
@@ -256,69 +180,29 @@
 						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
-					B7151DA91D899C1E0008B5AC = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = DVQ96RL2KL;
-						ProvisioningStyle = Automatic;
-					};
 				};
 			};
 			buildConfigurationList = B7151D601D892B600008B5AC /* Build configuration list for PBXProject "Callout" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
 			mainGroup = B7151D5C1D892B600008B5AC;
+			packageReferences = (
+				5A43BC602321EE0200755174 /* XCRemoteSwiftPackageReference "APNGasmCocoa" */,
+			);
 			productRefGroup = B7151D641D892B600008B5AC /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = B7151D871D892B9B0008B5AC /* Products */;
-					ProjectRef = B7151D861D892B9B0008B5AC /* APNG.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				B7151D621D892B600008B5AC /* Callout */,
 				B7151D6C1D892B600008B5AC /* MessagesExtension */,
-				B7151DA91D899C1E0008B5AC /* EmbedFramework */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		5A90B56C2018B985000BFBBA /* APNGTests-IOS.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "APNGTests-IOS.xctest";
-			remoteRef = 5A90B56B2018B985000BFBBA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		5A90B56E2018B985000BFBBA /* APNGTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = APNGTests.xctest;
-			remoteRef = 5A90B56D2018B985000BFBBA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B7151D8C1D892B9C0008B5AC /* APNG.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = APNG.framework;
-			remoteRef = B7151D8B1D892B9C0008B5AC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B7151D8E1D892B9C0008B5AC /* APNG.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = APNG.framework;
-			remoteRef = B7151D8D1D892B9C0008B5AC /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		B7151D611D892B600008B5AC /* Resources */ = {
@@ -340,22 +224,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		B7151DB11D899C310008B5AC /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ \"${DEPLOYMENT_LOCATION}\" = \"YES\" ] ; then\nFRAMEWORKS_DIR=\"${DSTROOT}/Applications/Callout.app/Frameworks\"\nelse\nFRAMEWORKS_DIR=\"${BUILT_PRODUCTS_DIR}/Callout.app/Frameworks\"\nfi\n\nrm -rf \"${FRAMEWORKS_DIR}/APNG.framework\"\nmkdir -p \"${FRAMEWORKS_DIR}\"\ncp -r \"${BUILT_PRODUCTS_DIR}/APNG.framework\" \"${FRAMEWORKS_DIR}\"";
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		B7151D691D892B600008B5AC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -370,25 +238,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5A187A071F66CD62008BA6F6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "APNG(iOS)";
-			targetProxy = 5A187A061F66CD62008BA6F6 /* PBXContainerItemProxy */;
-		};
 		B7151D701D892B600008B5AC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B7151D6C1D892B600008B5AC /* MessagesExtension */;
 			targetProxy = B7151D6F1D892B600008B5AC /* PBXContainerItemProxy */;
-		};
-		B7151DAE1D899C250008B5AC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "APNG(iOS)";
-			targetProxy = B7151DAD1D899C250008B5AC /* PBXContainerItemProxy */;
-		};
-		B7151DB01D899C290008B5AC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B7151DA91D899C1E0008B5AC /* EmbedFramework */;
-			targetProxy = B7151DAF1D899C290008B5AC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -408,6 +261,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -453,7 +307,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -466,6 +320,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -505,10 +360,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -517,9 +373,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DVQ96RL2KL;
 				INFOPLIST_FILE = MessagesExtension/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.telethon.Callout.MessagesExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -532,9 +395,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DVQ96RL2KL;
 				INFOPLIST_FILE = MessagesExtension/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.telethon.Callout.MessagesExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -548,8 +418,11 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DVQ96RL2KL;
 				INFOPLIST_FILE = Callout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.telethon.Callout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
@@ -563,29 +436,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DVQ96RL2KL;
 				INFOPLIST_FILE = Callout/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.telethon.Callout;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		B7151DAB1D899C1E0008B5AC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = DVQ96RL2KL;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		B7151DAC1D899C1E0008B5AC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEVELOPMENT_TEAM = DVQ96RL2KL;
-				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -619,16 +479,26 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B7151DAA1D899C1E0008B5AC /* Build configuration list for PBXAggregateTarget "EmbedFramework" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B7151DAB1D899C1E0008B5AC /* Debug */,
-				B7151DAC1D899C1E0008B5AC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5A43BC602321EE0200755174 /* XCRemoteSwiftPackageReference "APNGasmCocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/shinjukunian/APNGasmCocoa.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5A43BC612321EE0200755174 /* ANPG */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5A43BC602321EE0200755174 /* XCRemoteSwiftPackageReference "APNGasmCocoa" */;
+			productName = ANPG;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B7151D5D1D892B600008B5AC /* Project object */;
 }
