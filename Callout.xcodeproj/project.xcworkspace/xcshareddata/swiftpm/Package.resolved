@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "APNG",
+        "repositoryURL": "https://github.com/shinjukunian/APNGasmCocoa.git",
+        "state": {
+          "branch": "master",
+          "revision": "c5fc4b740dea3284f881f3b9935f95cd2a84071b",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
