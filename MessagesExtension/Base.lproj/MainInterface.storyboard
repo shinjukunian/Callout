@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ObA-dk-sSI">
     <device id="retina5_9" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,10 +20,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9Mj-LN-Inb">
-                                <rect key="frame" x="16" y="44" width="288" height="56"/>
+                                <rect key="frame" x="16" y="44" width="288" height="51"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" barStyle="black" searchBarStyle="minimal" placeholder="Enter Text" translatesAutoresizingMaskIntoConstraints="NO" id="Ygq-Z5-dGG">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="56"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="51"/>
                                         <textInputTraits key="textInputTraits" keyboardAppearance="light"/>
                                         <connections>
                                             <outlet property="delegate" destination="ObA-dk-sSI" id="g7f-uZ-foo"/>
@@ -32,13 +32,14 @@
                                 </subviews>
                             </stackView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PsZ-7R-cEv">
-                                <rect key="frame" x="16" y="100" width="288" height="428"/>
+                                <rect key="frame" x="16" y="95" width="288" height="433"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="tAT-Md-g3N" kind="embed" id="hQG-Qq-EuY"/>
                                 </connections>
                             </containerView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="WmA-0o-Nk3"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Xae-lf-urc" firstAttribute="centerY" secondItem="zMn-AG-sqS" secondAttribute="centerY" id="0tl-NJ-hTy"/>
@@ -53,7 +54,6 @@
                             <constraint firstItem="WmA-0o-Nk3" firstAttribute="bottom" secondItem="PsZ-7R-cEv" secondAttribute="bottom" id="lPe-YR-uOp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9Mj-LN-Inb" secondAttribute="trailing" id="mtf-lU-LfK"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="WmA-0o-Nk3"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="528"/>
@@ -70,10 +70,10 @@
             <objects>
                 <viewController id="tAT-Md-g3N" customClass="StickerBrowserController" customModule="MessagesExtension" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vqh-n0-1YU">
-                        <rect key="frame" x="0.0" y="0.0" width="288" height="428"/>
+                        <rect key="frame" x="0.0" y="0.0" width="288" height="433"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <viewLayoutGuide key="safeArea" id="e6i-tZ-Jlf"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4zO-fq-I8t" userLabel="First Responder" sceneMemberID="firstResponder"/>

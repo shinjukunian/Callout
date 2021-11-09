@@ -32,8 +32,8 @@ class MessagesViewController: MSMessagesAppViewController,UISearchBarDelegate {
         }
     }
     lazy var imageURLS: [URL] = {
-        let temp=URL(fileURLWithPath: NSTemporaryDirectory())
-        if let urls=try? FileManager.default.contentsOfDirectory(at: temp, includingPropertiesForKeys: [.addedToDirectoryDateKey,.isDirectoryKey], options: [.skipsHiddenFiles]){
+        
+        if let urls=try? FileManager.default.contentsOfDirectory(at: FileManager.default.temporaryDirectory, includingPropertiesForKeys: [.addedToDirectoryDateKey,.isDirectoryKey], options: [.skipsHiddenFiles]){
             let sorted=urls.sorted(by: {url1, url2 in
                 if  let values1 = try? url1.resourceValues(forKeys: Set([.addedToDirectoryDateKey])),
                     let values2 = try? url2.resourceValues(forKeys: Set([.addedToDirectoryDateKey])),
@@ -63,7 +63,7 @@ class MessagesViewController: MSMessagesAppViewController,UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
         self.searchBar.tintColor=UIColor.white
         UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).textColor=UIColor.white
         
