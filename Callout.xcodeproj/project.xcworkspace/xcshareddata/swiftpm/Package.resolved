@@ -1,16 +1,14 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "APNG",
-        "repositoryURL": "https://github.com/shinjukunian/APNGasmCocoa.git",
-        "state": {
-          "branch": "master",
-          "revision": "08f0c64663a14b580a0ebbc1fb789b7bdd2e7349",
-          "version": null
-        }
+  "pins" : [
+    {
+      "identity" : "apngasmcocoa",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/shinjukunian/APNGasmCocoa.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "12c93aa413b105e12e3de74a1969f026ad741942"
       }
-    ]
-  },
-  "version": 1
+    }
+  ],
+  "version" : 2
 }
